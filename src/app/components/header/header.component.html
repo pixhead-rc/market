@@ -1,0 +1,19 @@
+<div class="flex flex-row w-full h-[80px] bg-white border-b border-slate-300">
+  <div class="flex justify-center items-center w-[250px] shrink-0">
+    <img class="w-[120px] h-[50px]" src="assets/img/logo.png">
+  </div>
+  <div class="flex flex-row w-full justify-between">
+    <div class="flex items-center ml-6">
+      <input class="header-search bg-[url('assets/icSearch.svg')] bg-no-repeat bg-[right_7px_top_13px] focus:bg-none" type="search" placeholder="Search">
+    </div>
+    <div class="flex flex-row gap-[24px] pr-6 items-center">
+      <div class="cursor-pointer" [innerHTML]="icAddFriend | sanitize"></div>
+      <div class="cursor-pointer" [innerHTML]="icChats | sanitize"></div>
+      <div class="cursor-pointer" [innerHTML]="icNotifs | sanitize"></div>
+      <div class="flex flex-row gap-2 items-center cursor-pointer">
+        <div class="flex w-[34px] h-[34px] rounded-full bg-contain bg-[url('https://sun139-1.userapi.com/s/v1/if1/7PzmAcMyHRo_DoCdLK8BmpV4ZotGoybf7fhUmWkbo79qCztoOcq8ZefB-tvBeucd1ajaUA.jpg?size=50x50&quality=96&crop=104,104,836,836&ava=1')]"></div>
+        <div [innerHTML]="icDropdown | sanitize"></div>
+      </div>
+    </div>
+  </div>
+</div>

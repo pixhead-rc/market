@@ -1,0 +1,24 @@
+<div class="flex flex-col w-[300px] h-full pt-[10px] overflow-auto bg-white border-l rounded-l-2xl border-slate-300">
+  <div class="flex flex-col h-full justify-between grow-0">
+    <div *ngFor="let section of sectionsMock" class="flex flex-col w-full mb-4">
+      <div class="flex h-[52px] px-[20px] items-center">
+        <span class="font-semibold text-gray-400">{{section.title}}</span>
+      </div>
+      <div *ngFor="let option of section.options" class="flex flex-row h-[52px] px-[20px] gap-[15px] items-center hover:bg-slate-100 cursor-pointer">
+        <div class="flex w-[32px] h-[32px]">
+          <div class="flex w-[32px] h-[32px] rounded-full justify-center items-center bg-slate-300" [style]="'background-color: ' + nameToColor(option.name) + ';'">
+            <span class="text-sm text-white">{{option.name | abbr}}</span>
+          </div>
+        </div>
+        <div class="flex flex-row w-full justify-between items-center">
+          <span class="text-sm">{{option.name}}</span>
+          <span *ngIf="option.lastOnline > 0" class="text-xs text-slate-400">{{option.lastOnline}} min</span>
+          <div *ngIf="option.lastOnline == 0" class="flex w-[10px] h-[10px] rounded-full bg-green-400"></div>
+        </div>
+      </div>
+    </div>
+    <div class="flex h-[38px] border-t border-slate-300 shrink-0">
+      <input class="w-full h-full outline-none text-sm pl-[50px] bg-transparent bg-[url('assets/icSearch.svg')] bg-no-repeat bg-[left_18px_top_7px] focus:bg-none focus:px-[16px]" type="search" placeholder="Search...">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.link-active {
+    @apply m-[-4px] w-2 h-10 border-r-4 rounded-r-2xl border-blue-600;
+
+    + div {
+        @apply px-[24px];
+    }
+}
+
+.link-hover {
+    @apply m-[-4px] w-2 h-10 border-r-4 rounded-r-2xl border-gray-400;
+
+    + div {
+        @apply px-[24px];
+    }
+}
+
+.link-icon-active {
+    svg {
+        fill:rgb(37 99 235)!important;
+    }
+}
+
+.link-icon-inactive {
+    svg {
+        @apply fill-gray-400;
+    }
+}
+
+.link-text-active {
+    @apply text-blue-600;
+}
